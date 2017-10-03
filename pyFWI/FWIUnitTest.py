@@ -165,7 +165,7 @@ class TestFWIFunctions(unittest.TestCase):
             try:
                 ffmc = FFMC(inputs[x][2],inputs[x][3],inputs[x][4],inputs[x][5],results[x][0])
                 dmc = DMC(inputs[x][2],inputs[x][3],inputs[x][5],results[x][1],45.98,inputs[x][0])
-                print inputs[x][2],inputs[x][3],inputs[x][5],results[x][1],45.98,inputs[x][0],dmc
+                print(inputs[x][2],inputs[x][3],inputs[x][5],results[x][1],45.98,inputs[x][0],dmc)
                 dc = DC(inputs[x][2],inputs[x][5],results[x][2],45.98,inputs[x][0])
                 isi = ISI(inputs[x][4], ffmc)
                 bui = BUI(dmc,dc)
@@ -181,15 +181,15 @@ class TestFWIFunctions(unittest.TestCase):
 
                 #custom error message
                 if not(final):
-                    print "Failed on line " + repr(x) + ":"
-                    print "Inputs: " + repr(inputs[x])
-                    print "Expected: " + repr(outputs[x+1])
-                    print "Got: " + repr(results[x+1])
+                    print("Failed on line " + repr(x) + ":")
+                    print("Inputs: " + repr(inputs[x]))
+                    print("Expected: " + repr(outputs[x+1]))
+                    print("Got: " + repr(results[x+1]))
             
                 self.assertTrue(final)
             except:
-                print "Error on line " + repr(x+1) + ":"
-                print "Inputs: " + repr(inputs[x])
+                print("Error on line " + repr(x+1) + ":")
+                print("Inputs: " + repr(inputs[x]))
                 raise
 
     def testLawsonEq1(self):
