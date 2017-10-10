@@ -5,6 +5,8 @@ sudo python setup.py install
 
 This will install pyFWI to the standard distribution location (/usr/local/lib/python2.6/dist-packages/) and FWI.py to a standard location on your path (/usr/local/bin/FWI.py).
 
+Alternatively, run the code in a Docker container using this image [py3-fwi](https://hub.docker.com/r/cheewai/py3-fwi/) built from https://github.com/cynici/py3-fwi/.
+
 Usage:
 
 
